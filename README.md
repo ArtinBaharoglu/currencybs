@@ -42,6 +42,10 @@ bash
 
 composer install
 
+bash 
+
+composer update
+
 
 Prepare project:
 
