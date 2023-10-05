@@ -27,7 +27,7 @@ cp .env.example .env
 
 > Don't forget configure the database settings
 > 
-> In order to avoid problems with local SSL when reading the CBRT exchange rates, an arrangement has been made in the Teknomavi package Doviz.php file located in the vendor;
+> In order to avoid problems with local SSL when reading the TCMB exchange rates, an arrangement has been made in the Teknomavi package Doviz.php file located in the vendor;
 <br>
 // Disable SSL checking,
 <br>
