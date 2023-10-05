@@ -1,21 +1,66 @@
+# Exchange Currency Buy/Sell API Project
+> Postman Fork Link<br><br>
+[![Fork in Postman](https://run.pstmn.io/button.svg)](https://web.postman.co/network/import?collection=27789161-61bbf365-546f-4e2f-a6b5-7e46a632599c-2s9YJdWi2J&referrer=https%3A%2F%2Fdocumenter.getpostman.com%2Fview%2F27789161%2F2s9YJdWi2J&versionTag=latest&source=documenter&traceId=undefined)
+
+<br><br>
+
+In this project, foreign exchange buying/selling transactions are calculated in return for certain commissions and the CBRT foreign exchange rates are listed.
+
+Clone project to your local machine:
+
+> Create a database named '*currency_bs*'
+
+bash
+
+git clone https://github.com/ArtinBaharoglu/currencybs.git
+
+bash
+
+cd edurey
+
+Copy the `.env.example` file to `.env`:
+
+bash
+
+cp .env.example .env
 
 
-## Exchange Currency Buy/Sell Project
-
-Bu projede döviş alış/satış işlemlerini belirli komisyonlar karşılığında hesaplanması ve TCMB Döviz kurlarının listelemesi sağlanmıştır.
-
-Sırası ile aşağıdaki komutlar çalıştırılmalıdır;
-
-composer update<br>
-php artisan key:generate
+> Don't forget configure the database settings
+> 
+> In order to avoid problems with local SSL when reading the CBRT exchange rates, an arrangement has been made in the Teknomavi package Doviz.php file located in the vendor;
 <br>
-php artisan migrate<br>
-php artisan serve
-
-TCMB döviz kurları okunurken localde SSL ile ilgili olarak sorun olmaması adına, vendor içerisinde yer alan teknomavi paketi Doviz.php dosyası içerisinde düzenleme yapılmıştır;
-<br>
-// SSL kontrolünü devre dışı bırakma,
+// Disable SSL checking,
 <br>
 $curl->setOption(CURLOPT_SSL_VERIFYPEER, false);
 <br>
 $curl->setOption(CURLOPT_SSL_VERIFYHOST, false);
+
+
+Install composer dependencies:
+
+bash
+
+composer install
+
+
+Prepare project:
+
+bash
+
+php artisan key:generate
+
+
+bash
+
+php artisan key:migrate
+
+bash
+
+php artisan migrate
+
+Run the project:
+
+bash
+
+php artisan serve
+
