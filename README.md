@@ -14,9 +14,6 @@ bash
 
 git clone https://github.com/ArtinBaharoglu/currencybs.git
 
-bash
-
-cd edurey
 
 Copy the `.env.example` file to `.env`:
 
